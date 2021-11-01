@@ -1,0 +1,18 @@
+.contacts-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 50px;
+  width: 100%;
+  background-color: #141414;
+  gap: 40px;
+}
+.contacts {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.icon:hover {
+  position: relative;
+  bottom: 5px;
+}

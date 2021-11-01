@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
+
+html{
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.to-top{
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 99999;
+  outline: none;
+  background-color: rgba(22, 224, 189,0.5);
+  backdrop-filter: blur(10px);
+  color: black;
+  cursor: pointer;
+  /* padding: 15px; */
+  text-align: center;
+  line-height: 40px;
+  font-weight: lighter;
+  width:30px;
+  height:30px;
+  border-radius: 4px;
+}
+header {
+  position:fixed;
+  width:100vw;
+  z-index:1000;
+  border-bottom: 3px solid black;
+  background-color: #141414;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  gap: 100px;
+  width: 80%;
+  margin: auto;
+}
+.nav-logo{
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Grey Qo', cursive;
+  font-family: 'Cookie', cursive;
+  color: white;
+  text-decoration: none;
+  display: none;
+}
+.nav-menu {
+  background-color: #141414;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  align-items: center;
+  z-index: 1;
+}
+li.nav-item {
+  list-style-type: none;
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+.nav-item a:hover{
+  color:#16E0BD;
+}
+.nav-link {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+}
+
+/* ----------------------Hamburger button---------------------- */
+
+.hamburger {
+  display: none;
+  background-color: #141414;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+/* ----------------------responsive settings for navbar---------------------- */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+  .nav-logo{
+    display: inline-block;
+  }
+  .nav-link{
+    font-size: 1rem;
+  }
+  .nav-item a:hover{
+    color:black;
+  }
+  .nav-menu {
+    position: absolute;
+    left: -100%;
+    top: 6rem;
+    gap:0;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    background-color: #303030;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-item {
+    margin: 1.5rem 0;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+}

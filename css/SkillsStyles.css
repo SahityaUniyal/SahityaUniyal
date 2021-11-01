@@ -1,0 +1,121 @@
+.skills-section{
+    background-color: #2E2E2E;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(155, 150, 150, 0.5)),
+      url("../images/SkillsBack.jpg");
+    background-size: 100vw 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:1em;
+}
+.skills-heading{
+    color:white;
+    font-size: 1rem;
+}
+
+.skills-container{
+    width:90%;
+    /* max-width: 1000px; */
+    padding:10px 0 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+}
+.skill{
+    display:flex;
+    align-items:center;
+    gap:1em;
+    padding-right:10px;
+    width:calc(100% + 1em);
+    height:2em;
+    background-color: white;
+    margin-top:20px;
+    position:relative;
+    left:-1em;
+}
+.skill-name{
+    width:120px;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-top: 1em solid black;
+    border-left: 1em solid transparent;
+    position:relative;
+    top:1.5em;
+}
+.percentage-container{
+    width:50%;
+    text-align: center;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    color:white;
+    background-color: black;
+}
+.skill-percentage{
+    background-color: #0a9c84;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+}
+/* *********Respective Skills percentage********* */
+.C{
+    width:80%;
+}
+.html{
+    width:90%;
+}
+.JS{
+    width:60%;
+}
+.node{
+    width:50%;
+}
+.EJS{
+    width:60%;
+}
+.React{
+    width:20%;
+}
+
+
+/* *********Responsive Settings********* */
+
+@media only screen and (min-width:400px){
+    .skills-heading{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width:600px){
+    .skills-container{
+        width:70%;
+    }
+    .skills-heading{
+        font-size: 1.8rem;
+    }
+}
+@media only screen and (min-width:800px){
+    .skills-container{
+        width:60%;
+    }
+}
+@media only screen and (min-width:900px){
+    .skills-container{
+        width:50%;
+    }
+}
+@media only screen and (min-width:1000px){
+    .skills-container{
+        width:40%;
+    }
+}

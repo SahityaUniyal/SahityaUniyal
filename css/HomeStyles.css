@@ -1,0 +1,107 @@
+.my-image {
+  width: 250px;
+  height: 250px;
+  box-shadow: 10px 7px 32px -13px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 10px 7px 32px -13px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 10px 7px 32px -13px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.intro {
+  width: max-content;
+  padding: 7em 2em 4em 2em;
+  margin: auto;
+}
+.intro h1 {
+  font-weight: 1;
+  font-size:2em;
+}
+.name-text {
+  display: block;
+}
+
+.colored-back {
+  display: block;
+  margin-bottom: 0.25em;
+  background-color: #14cfae;
+  color: #1C4B43;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 0.25em;
+  padding-left:2em;
+  position:relative;
+  right:2em;
+  width:calc(100% + 4em);
+}
+
+@media only screen and (min-width: 600px) {
+  .intro {
+    display: grid;
+    width: max-content;
+    grid-column-gap: 2em;
+    grid-template-areas:
+      "img title"
+      "img subtitle";
+    margin: auto;
+  }
+  .title {
+    grid-area: title;
+    position: relative;
+    top: 40px;
+  }
+  .my-image {
+    grid-area: img;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 10px 7px 32px -13px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 10px 7px 32px -13px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 10px 7px 32px -13px rgba(0, 0, 0, 0.7);
+  }
+  .colored-back {
+    grid-area: subtitle;
+    align-self: start;
+    grid-column: -1/1;
+    grid-row: 2;
+    text-align: left;
+    position: relative;
+    padding-left:13.5em;
+    left:-1.5em;
+    width: calc(100% + 1.5em);
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .my-image {
+    width: 100%;
+    height: 200px;
+  }
+  .intro {
+    width: 100vw;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .colored-back {
+    padding: 0.25em;
+    padding-left:0em;
+    position:static;
+    width:100%;
+  }
+    .intro {
+    width: 100vw;
+  }
+  .my-image {
+    width: 100%;
+    height: min-content;
+    margin:auto;
+  }
+}
+
