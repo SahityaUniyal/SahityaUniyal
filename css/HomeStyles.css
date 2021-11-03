@@ -81,7 +81,7 @@
 
 @media only screen and (max-width: 290px) {
   .my-image {
-    width: 100%;
+    width: 200px;
     height: 200px;
   }
   .intro {
@@ -100,7 +100,6 @@
   }
   .my-image {
     width: 100%;
-    height: min-content;
     margin:auto;
   }
 }
